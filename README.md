@@ -1,12 +1,18 @@
 # ---How to use Mint---
 
-# If its your first time using Mint do the following
+**Note**: If .gguf file not there then, install .gguf --> https://huggingface.co/hachi-intelligence/HACHI-Summary-Ja-sarashina2.2-0.5b-instruct-v0.1-GGUF/tree/main
 
-Step 1: Run Setup.bat as administrator
+Select > HACHI-Summary-Ja-sarashina2.2-0.5b-instruct-v0.1-Q8_0.gguf
+
+Put the file in mint.py folder
+
+Rename it to >>> hachi-70m.gguf
+
+Step 1: Run setup.bat as administrator and run mod.bat aswell
 Step 2: To use Console click on mint.py
 Step 3: To use IDLE, first install the extension
 
-## Extension
+## 0. Extension
 
 Step 1: Go to https://github.com/limesuggestbox360-art/Mint
 Step 2: Click on <>Code
@@ -26,7 +32,7 @@ if you guys think this is a virus, check the code its not malware.
 Create a .mint file and set it to open with Python.exe
 Run the mint.py file to start!
 
-## Basics
+## 1. Basics
 
     write() --> Prints "hello" in console
     a = 100 --> Creates new Var
@@ -35,18 +41,18 @@ Run the mint.py file to start!
     calc(mathequation) --> does complex math equation
     exit --> Exits console
 
-## Logic
+## 2. Logic
 
     if(condition, code) --> Execute something on matching condition(s)
     repeat(times, code) --> Execute something by times
     while(condition, code) --> Execute something forever until the matching condition(s) are false
 
-## Func
-
-    func name (argument) {code; code} --> Creates a new func with name "name" and with 2 vals 'argument, code'
+## 3. Func
+ 
+    func name {code; code} --> Creates a new func with name "name" which does 2 cmds (code; code)
     call name --> Calls the func
 
-## Media
+## 4. Media
 
     img(imagefile.format) --> Creates a new image on the console
     sound(soundfile.format) --> Plays a sound 
@@ -57,7 +63,7 @@ Run the mint.py file to start!
     vseek(ms) --> Seeks to ms of video
     vlength() --> Gets the length of the video
  
-## Website Automation
+## 5. Website Automation
 
     browser(browser) --> Opens a new browser
     website(website) --> Opens a new website
@@ -65,32 +71,8 @@ Run the mint.py file to start!
     type(bytype, item, wait_time, text) --> Enter text in a input
     clink(link) --> Click on a link
     browser.quit() --> Close browser
-    
-## Other(Modules) 
 
-### Turt
-	turt() --> Open a new Turtle window
-	turt(circ, radius) --> Creates a new circle with the provided 'radius'
-	turt(pup) --> Pen up
-	turt(pdown) --> Pen down
-	turt(pensize, size) --> Pen size
-	turt(color, value) --> Changes Pen color by the provided 'value'
-	turt(direction, degree) --> Moves towards the direction by the provided 'degree'
-	turt(clear) --> Clears the screen
-	turt(reset) --> Resets the window
-	turt(move, cord) --> Moves to the provided 'cord'
-	turt(head, cord) --> Moves head to the provided 'cord'
-	turt(speed, value) --> Sets the speed by the provided 'value'
-
-### Date
-    date(micro) --> Prints the exact time down to microseconds
-    date(formatted) --> Prints the date of today (YYYY, MM, DD)
-    date(hour) --> Prints the exact hour (24-hour)
-    date(minute) --> Prints the exact minute (0-59)
-    date(second) --> Prints the exact second (0-59)
-    date(microsecond) --> Prints the exact microtime
-    
-## File
+## 6. File
 
     save(file.format) --> Saves to a file
     load(file.format) --> Loads in all vars and functions
@@ -98,14 +80,13 @@ Run the mint.py file to start!
     locate(filedirectory, action) --> does an action on a file (best used when file is outside mint folder)
     file(filedirectory) --> Run any type of file that your computer supports
 
- # Developer API 
+## 7. AI
 
-### Notes:
+    ai(model, apikey, role, message, var) --> Supports OpenAI models (Needs Internet!)
+    llm(model, apikey, role, message, var) --> Supports more AI models (Needs Internet!)
+    tinyai(message) --> Uses local AI (No Internet needed!)
 
-    [1] --> Anything after ...
-    [0] --> Anything before ...
-    split --> Split 2 or more ...
-    strip --> Strip 2 or more ...
+## 8. Developer API 
 
     py(pythoncode1; pythoncode2; pythoncode3; etc...) --> Runs python commands
     
@@ -165,17 +146,14 @@ Run the mint.py file to start!
         for statement in val.split(";"):
             #Code
     return
-	
-# Updates(Contributers & Commiters Only)
 
-	If you have updated the mint.py file(except bug fixes), do the following
+## 9. Updates(Contributers Only)
+
+	If you have updated the mint.py file, do the following
 
 	Step 1: Go to mint-lang folder
 	Step 2: Add your command inside syntaxes > mint.tmLanguage.json
 	Step 3: Make changes in lc.json, extension.js or package.json if needed
 	Step 4: Save all
 	Step 5: type "vsce package" in vscode terminal
-	Step 6: type "git add extension.js package.json language-configuration.json
-		git commit -m "update title"
-		git push origin main --force" in vscode terminal
-	Step 7: Go to GitHub and Make a new release of Mint(mint-lang has been released auto)
+	
