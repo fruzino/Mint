@@ -110,7 +110,7 @@ Run the mint.py file to start!
             import sys
             DISPATCH[sys.argv[1]](sys.argv[2:])
     
-    and in the .plug enter your command, one exampel is this >>>
+    and in the .plug enter your command, one example is this >>>
 
         script = plugins/pluginfoldername/yourpluginname.py
         cmd    = mycommand
